@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="bookDao" class="com.wyy.dao.impl.BookDaoImpl" init-method="init" destroy-method="destory" />
+
+    <!-- scope 设置单例/多个-->
+    <bean id="bookService" class="com.wyy.service.impl.BookServiceImpl" autowire="byType">
+    </bean>
+
+</beans>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!-- name 属性 设置别名 多个可用空格，；隔开 -->
+    <bean id="bookDao" name="bookDao2 bookDao3 bookDao4" class="com.wyy.dao.impl.BookDaoImpl" />
+
+    <!-- scope 设置单例/多个-->
+    <bean id="bookService" name="bookService2,bookService3" class="com.wyy.service.impl.BookServiceImpl"
+    scope="prototype">
+        <property name="bookDao" ref="bookDao3" />
+    </bean>
+
+</beans>

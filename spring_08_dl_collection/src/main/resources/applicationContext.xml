@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="bookDao" class="com.wyy.dao.impl.BookDaoImpl">
+        <property name="array">
+            <array>
+                <value>1</value>
+                <value>2</value>
+                <value>3</value>
+            </array>
+        </property>
+        <property name="list">
+            <list>
+                <value>4</value>
+                <value>5</value>
+                <value>6</value>
+            </list>
+        </property>
+        <property name="set">
+            <set>
+                <value>7</value>
+                <value>8</value>
+                <value>9</value>
+            </set>
+        </property>
+        <property name="map">
+            <map>
+                <entry key="k1" value="v1">
+
+                </entry>
+                <entry key="k2" value="v2"/>
+            </map>
+        </property>
+        <property name="properties">
+            <props>
+                <prop key="k1">v1</prop>
+                <prop key="k2">v2</prop>
+            </props>
+        </property>
+    </bean>
+
+
+</beans>
